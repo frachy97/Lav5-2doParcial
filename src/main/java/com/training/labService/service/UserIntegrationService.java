@@ -13,10 +13,7 @@ public class UserIntegrationService {
     @Autowired
     private UsersIntegrationComponent usersIntegrationComponent;
 
-    public ResponseEntity<Person> getUser() {
-        Person person= new Person(usersIntegrationComponent.getUserFromApi().getName(),
-                usersIntegrationComponent.getUserFromApi().getLastName(),
-                usersIntegrationComponent.getUserFromApi().getDuration()) ;
-        return (person.equals(null)) ? ResponseEntity.ok(person) : ResponseEntity.noContent().build();
+    public ResponseEntity<String> getUser() {
+       return ResponseEntity.ok(usersIntegrationComponent.getUserFromApi());
     }
 }
