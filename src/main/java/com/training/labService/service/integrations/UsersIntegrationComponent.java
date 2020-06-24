@@ -21,12 +21,11 @@ public class UsersIntegrationComponent {
     }
 
 
-    //NO FUNCIONA, hubiera sido preferirble modificar la projection a un dto o tirar el usuario completo
-    // por falta de tiempo no se logro
-    public MostDurationProjection getUserFromApi() {
-       return rest.getForObject(url, MostDurationProjection.class);
+     public String getUserFromApi() {
+       return rest.getForObject(url, String.class);
 
     }
+
 
 
 }
