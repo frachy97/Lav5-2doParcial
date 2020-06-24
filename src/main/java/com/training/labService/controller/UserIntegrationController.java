@@ -17,7 +17,7 @@ public class UserIntegrationController {
     UserIntegrationService userIntegrationService;
 
     @GetMapping("/person")
-    public ResponseEntity<Person> getUser() {
+    public ResponseEntity<String> getUser() {
         return userIntegrationService.getUser();
     }
 }
